@@ -3,27 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Monarch | Clothing</title>
+    <title>MONARCH | Luxury Clothing</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Helvetica Neue', Arial, sans-serif; color: #222; line-height: 1.6; }
-        header { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; }
-        .logo { font-size: 1.4rem; letter-spacing: 2px; font-weight: 300; }
-        nav a { margin-left: 24px; text-decoration: none; color: #555; font-size: 0.9rem; }
-        nav a:hover { color: #000; }
-        .hero { padding: 100px 40px; text-align: center; background: #f9f9f9; }
-        .hero h1 { font-size: 2.8rem; font-weight: 300; margin-bottom: 16px; letter-spacing: 3px; }
-        .hero p { color: #777; font-size: 1rem; }
-        .collections { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 60px 40px; max-width: 1200px; margin: 0 auto; }
-        .collection-card { background: #f0f0f0; padding: 60px 20px; text-align: center; }
-        .collection-card h3 { font-weight: 300; letter-spacing: 2px; margin-bottom: 8px; }
-        .collection-card p { font-size: 0.85rem; color: #888; }
-        footer { padding: 40px; text-align: center; font-size: 0.8rem; color: #999; border-top: 1px solid #eee; }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background: #0A0A0A;
+            color: #FFFFFF;
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+        header {
+            padding: 22px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #C9A227;
+            background: #0A0A0A;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            letter-spacing: 6px;
+            font-weight: 300;
+            color: #C9A227;
+        }
+
+        nav a {
+            margin-left: 28px;
+            text-decoration: none;
+            color: #FFFFFF;
+            font-size: 0.78rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        nav a:hover { color: #C9A227; }
+
+        /* HERO */
+        .hero {
+            padding: 140px 40px;
+            text-align: center;
+            background: #0A0A0A;
+            border-bottom: 1px solid #1A1A1A;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 200;
+            letter-spacing: 12px;
+            color: #FFFFFF;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            color: #C9A227;
+            font-size: 0.85rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        /* SECTION TITLES */
+        .section-title {
+            text-align: center;
+            font-weight: 300;
+            letter-spacing: 8px;
+            font-size: 1.1rem;
+            color: #C9A227;
+            text-transform: uppercase;
+            margin-top: 80px;
+            margin-bottom: 10px;
+        }
+
+        .section-line {
+            width: 60px;
+            height: 1px;
+            background: #C9A227;
+            margin: 0 auto 50px auto;
+        }
+
+        /* COLLECTION CATEGORIES */
+        .collections {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: #C9A227;
+            max-width: 1200px;
+            margin: 0 auto;
+            border: 1px solid #C9A227;
+        }
+
+        .collection-card {
+            background: #0A0A0A;
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        .collection-card h3 {
+            font-weight: 300;
+            letter-spacing: 5px;
+            margin-bottom: 10px;
+            color: #FFFFFF;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+        }
+
+        .collection-card p {
+            font-size: 0.75rem;
+            color: #888;
+            letter-spacing: 1px;
+        }
+
+        /* PRODUCT GRID */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            padding: 0 40px 80px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: #0A0A0A;
+            border: 1px solid #1A1A1A;
+            padding-bottom: 20px;
+            transition: border 0.3s;
+        }
+
+        .product-card:hover {
+            border: 1px solid #C9A227;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 360px;
+            object-fit: cover;
+            background: #1A1A1A;
+            display: block;
+        }
+
+        .product-card h3 {
+            font-weight: 300;
+            font-size: 0.85rem;
+            margin: 18px 20px 4px 20px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+        }
+
+        .product-card .price {
+            color: #C9A227;
+            font-size: 0.85rem;
+            margin: 0 20px;
+            letter-spacing: 2px;
+        }
+
+        .add-to-cart {
+            margin: 18px 20px 0 20px;
+            padding: 12px 24px;
+            background: transparent;
+            color: #C9A227;
+            border: 1px solid #C9A227;
+            font-size: 0.7rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            cursor: pointer;
+            width: calc(100% - 40px);
+            transition: all 0.3s;
+        }
+
+        .add-to-cart:hover {
+            background: #C9A227;
+            color: #0A0A0A;
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 60px 40px;
+            text-align: center;
+            font-size: 0.7rem;
+            color: #888;
+            background: #0A0A0A;
+            border-top: 1px solid #C9A227;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        footer .footer-logo {
+            color: #C9A227;
+            font-size: 1rem;
+            letter-spacing: 8px;
+            margin-bottom: 12px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 700px) {
+            .hero h1 { font-size: 1.8rem; letter-spacing: 6px; }
+            .collections { grid-template-columns: 1fr; }
+            header { flex-direction: column; gap: 14px; padding: 20px; }
+            nav a { margin: 0 10px; }
+            .product-grid { padding: 0 20px 60px 20px; }
+        }
     </style>
 </head>
 <body>
+
     <header>
-        <div class="logo">Monarch</div>
+        <div class="logo">MONARCH</div>
         <nav>
             <a href="#shop">Shop</a>
             <a href="#about">About</a>
@@ -33,27 +222,60 @@
     </header>
 
     <section class="hero">
-        <h1>NEW COLLECTION</h1>
-        <p>Timeless pieces for the modern wardrobe.</p>
+        <h1>MONARCH</h1>
+        <p>Luxury Redefined</p>
     </section>
 
-    <section class="collections" id="shop">
+    <h2 class="section-title" id="shop">The Collections</h2>
+    <div class="section-line"></div>
+
+    <section class="collections">
         <div class="collection-card">
-            <h3>LUXURY</h3>
+            <h3>Luxury</h3>
             <p>Premium fabrics, refined cuts.</p>
         </div>
         <div class="collection-card">
-            <h3>THRIFT</h3>
+            <h3>Thrift</h3>
             <p>One-of-a-kind vintage finds.</p>
         </div>
         <div class="collection-card">
-            <h3>EVERYDAY</h3>
+            <h3>Everyday</h3>
             <p>Effortless staples for daily wear.</p>
         </div>
     </section>
 
+    <h2 class="section-title">Featured Pieces</h2>
+    <div class="section-line"></div>
+
+    <section class="product-grid">
+
+        <div class="product-card">
+            <img src="PASTE_IMAGE_URL_1_HERE" alt="Monarch Piece 1">
+            <h3>Piece One</h3>
+            <p class="price">$00.00</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="PASTE_IMAGE_URL_2_HERE" alt="Monarch Piece 2">
+            <h3>Piece Two</h3>
+            <p class="price">$00.00</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="PASTE_IMAGE_URL_3_HERE" alt="Monarch Piece 3">
+            <h3>Piece Three</h3>
+            <p class="price">$00.00</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+    </section>
+
     <footer>
-        <p>&copy; 2026 Monarch. All rights reserved.</p>
+        <div class="footer-logo">MONARCH</div>
+        <p>&copy; 2026 MONARCH. All rights reserved.</p>
     </footer>
+
 </body>
 </html>
