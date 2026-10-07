@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Monarch | Clothing</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; color: #222; line-height: 1.6; }
+        header { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; }
+        .logo { font-size: 1.4rem; letter-spacing: 2px; font-weight: 300; }
+        nav a { margin-left: 24px; text-decoration: none; color: #555; font-size: 0.9rem; }
+        nav a:hover { color: #000; }
+        .hero { padding: 100px 40px; text-align: center; background: #f9f9f9; }
+        .hero h1 { font-size: 2.8rem; font-weight: 300; margin-bottom: 16px; letter-spacing: 3px; }
+        .hero p { color: #777; font-size: 1rem; }
+        .collections { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 60px 40px; max-width: 1200px; margin: 0 auto; }
+        .collection-card { background: #f0f0f0; padding: 60px 20px; text-align: center; }
+        .collection-card h3 { font-weight: 300; letter-spacing: 2px; margin-bottom: 8px; }
+        .collection-card p { font-size: 0.85rem; color: #888; }
+        footer { padding: 40px; text-align: center; font-size: 0.8rem; color: #999; border-top: 1px solid #eee; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Monarch</div>
+        <nav>
+            <a href="#shop">Shop</a>
+            <a href="#about">About</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>NEW COLLECTION</h1>
+        <p>Timeless pieces for the modern wardrobe.</p>
+    </section>
+
+    <section class="collections" id="shop">
+        <div class="collection-card">
+            <h3>LUXURY</h3>
+            <p>Premium fabrics, refined cuts.</p>
+        </div>
+        <div class="collection-card">
+            <h3>THRIFT</h3>
+            <p>One-of-a-kind vintage finds.</p>
+        </div>
+        <div class="collection-card">
+            <h3>EVERYDAY</h3>
+            <p>Effortless staples for daily wear.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Monarch. All rights reserved.</p>
+    </footer>
+</body>
+</html>
